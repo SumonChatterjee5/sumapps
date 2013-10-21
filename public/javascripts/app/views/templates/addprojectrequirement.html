@@ -1,0 +1,317 @@
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar-inner">
+    	<div class="container">
+	    	<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+		    	<span class="icon-bar"></span>
+		    	<span class="icon-bar"></span>
+		    	<span class="icon-bar"></span>
+		    </button>
+		    <a class="brand" href="#">Requirement</a>
+		    	<div class="nav-collapse collapse">
+		            <ul class="nav">
+		              <li><a id="showRequirementForm" href="#">Add Requirement</a></li>
+		              <li><a id="showRequirement" href="#">Show Requirement</a></li>
+
+		            </ul>
+		        </div>
+		</div>
+	</div>
+</div>
+
+<div id="body-requirement">
+<div class="container">
+	<div class="row-fluid">
+		<div class="span1">
+
+		</div>
+		<div class="span11">
+			<h2 class="text-info">Add Requirement</h2>
+		</div>
+	</div>
+
+
+	<content>
+		<p class="">
+
+		<div class="row-fluid" id="success-added">
+			<div class="span1">
+
+			</div>
+			<div class="span10">
+			<label class="work-info" id="added"></label>
+			</div>
+			<div class="span1">
+
+			</div>
+		</div>
+
+				<!--<form>-->
+					<fieldset>
+						<div class="row-fluid">
+							<div class="span1">
+
+							</div>
+							<div class="span10">
+								<legend class="l-section-header">Client information</legend>
+							</div>
+
+							<div class="span1">
+
+							</div>
+						</div>
+					        <div class="row-fluid">
+					        	<div class="span1">
+
+								</div>
+					        	<div class="span5">
+					        		<label>Name</label>
+					        		<input type="text" placeholder="Enter your name" id="client_name">
+					        		<label class="label-error" id="error_client_name">Please enter full name.</label>
+							</div>
+							<div class="span1">
+
+							</div>
+					        	<div class="span5">
+					        		<label>Company name</label>
+					        		<input type="text" placeholder="Enter company name" id="company_name">
+					        		<label class="label-error" id="error_company_name">Please enter company name.</label>
+					        	</div>
+
+					        </div>
+					        <div class="row-fluid">
+					        	<div class="span1">
+
+							</div>
+					        	<div class="span5">
+					        		<label>Email</label>
+								<input type="text" placeholder="Enter your email-id" id="emailid">
+								<label class="label-error" id="error_email">Please enter email id.</label>
+								<label class="valid-format">(Format: abc@abc.com or abc@abc.co.in)</label>
+								<label class="label-error" id="error_invalid_email">Please enter valid email id.</label>
+							</div>
+							<div class="span1">
+
+							</div>
+							<div class="span5">
+								<label>Contact number</label>
+								<input type="text" placeholder="Enter contact number" id="contact_number"><br/>
+								<label class="valid-format">(Format: 111 111 1111 or 111-111-1111)</label>
+								<label class="label-error" id="error_invalid_contact_number">Please enter valid phone number.</label>
+					        	</div>
+
+					        </div>
+
+
+	        			</fieldset>
+
+	        			<fieldset>
+	        				<div class="row-fluid">
+							<div class="span1">
+
+							</div>
+							<div class="span10">
+								<legend class="l-section-header">Project details</legend>
+							</div>
+
+							<div class="span1">
+
+							</div>
+						</div>
+
+						<div class="row-fluid">
+							<div class="span1">
+
+							</div>
+							<div class="span5">
+								<label>Project name</label>
+								<input type="text" placeholder="Enter project name" id="project_name">
+								<label class="label-error" id="error_project_name">Please enter project name.</label>
+							</div>
+							<div class="span1">
+
+							</div>
+							<div class="span5">
+								<label>Project information</label>
+								<input type="text" placeholder="Enter project information" id="project_information">
+								<label class="label-error" id="error_project_information">Please enter project information.</label>
+							</div>
+						</div>
+					</fieldset>
+
+	        			<fieldset>
+	        				<div class="row-fluid">
+							<div class="span1">
+
+							</div>
+							<div class="span10">
+								<legend class="l-section-header">Project requirements</legend>
+							</div>
+
+							<div class="span1">
+
+							</div>
+						</div>
+
+					        <div class="row-fluid">
+						    	<div class="span1">
+
+							</div>
+							<div class="span5">
+								<label>Seed URL</label>
+								<input type="text" placeholder="Enter Seed URL" id="seed_url">
+								<label class="label-error" id="error_seed_url">Please enter Seed URL.</label>
+							</div>
+							<div class="span1">
+
+							</div>
+							<div class="span5">
+								<label>Data output format</label>
+								<select id="output_format">
+									<option value="" selected>Choose data output format</option>
+									<option>XML</option>
+									<option>CSV</option>
+									<option>JSON</option>
+									<option>XSLX</option>
+						 		</select>
+						 		<label class="label-error" id="error_data_output_format">Please select Data output format.</label>
+							</div>
+						</div>
+						<div class="row-fluid">
+							<div class="span1">
+
+							</div>
+							<div class="span5">
+								<label>Data schema</label>
+								<textarea id="data_schema" rows="5" placeholder="Enter Attributes or Fields"></textarea>
+								<label class="label-error" id="error_data_schema">Please enter the attributes or fields.</label>
+							</div>
+							<div class="span1">
+
+							</div>
+							<div class="span5">
+								<label>Sample file (Optional)</label>
+								<input type="text" placeholder="Sample file" id="sample_file">
+                                <!--<input id="fileInfo" type="file" name="fileInfo" multiple>-->
+                                <br>
+                                <span class="btn btn-success fileinput-button">
+                                    <i class="glyphicon glyphicon-plus"></i>
+                                    <span>Select files...</span>
+                                    <input id="fileInfo" type="file" name="fileInfo" multiple>
+                                </span>
+                                <label id="sample_file_name" class="upld-format"></label>
+
+
+							</div>
+						</div>
+						<div class="row-fluid">
+							<div class="span1">
+
+							</div>
+							<div class="span5">
+								<label>Data crawl frequency</label>
+								<select id="data_crawl_frequency">
+									<option value="" selected>Choose data crawl frequency</option>
+									<option value="Weekly">Weekly</option>
+									<option value="Fortnightly">Fortnightly</option>
+									<option value="Monthly">Monthly</option>
+								</select>
+								<label class="label-error" id="error_data_crawl_frequency">Please select Data crawl frequency.</label>
+							</div>
+							<div class="span1">
+
+							</div>
+							<div class="span5">
+								<label>Other requirements</label>
+								<input type="text" placeholder="Enter any other requirements" id="other_requirements">
+								<label class="label-error" id="error_other_requirements">Please select Data crawl frequency.</label>
+							</div>
+						</div>
+
+
+	        			</fieldset>
+	        				<div class="row-fluid">
+	        					<div class="span1">
+
+							</div>
+							<div class="span5">
+
+
+								<button type="button" id="addRequirement" class="btn btn-default btn-sm" data-action="addRequirementAction">Add</button>
+								&nbsp;&nbsp;&nbsp;<label class="img-loading" id="loadimg"><img src="images/loading.gif"></label>
+
+							</div>
+							<div class="span1">
+
+							</div>
+							<div class="span5">
+								<label class="work-add-info" id="adding"></label>
+
+
+							</div>
+						</div>
+
+					<!--</form>-->
+
+
+			</p>
+		</content>
+
+
+
+
+
+
+
+
+
+
+
+
+	</div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="body-show-requirement" style="display:none">
+<div class="container">
+	<div class="row-fluid">
+		<div class="span1">
+
+		</div>
+		<div class="span11">
+			<h2 class="text-info">Requirements</h2>
+		</div>
+	</div>
+
+	<content>
+		<p class="">
+
+
+
+		<div class="row-fluid" id="showReq">
+			<label class="img-loading" id="loadimgall"><img src="images/loading.gif">&nbsp;&nbsp;Loading...</label>
+		</div>
+
+
+
+
+		</p>
+	</content>
+
+</div>
+</div>
