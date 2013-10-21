@@ -4,7 +4,7 @@ reqpcClientName VARCHAR(50) NOT NULL,
 reqpcCompanyName VARCHAR(50) NOT NULL,
 reqpcEmailid VARCHAR(50) NOT NULL, reqpcContactNumber VARCHAR(50) NOT NULL,
 reqpcProjectName VARCHAR(50) NOT NULL,
-reqpcProjectInformation VARCHAR(50) NOT NULL,
+reqpcProjectInformation TEXT NOT NULL,
 reqpcSeedURL VARCHAR(50) NOT NULL, reqpcOutputFormat VARCHAR(50) NOT NULL,
 reqpcDataSchema VARCHAR(250) NOT NULL,
 reqpcSampleFile VARCHAR(50),
@@ -12,10 +12,5 @@ reqpcDataCrawlFrequency VARCHAR(50) NOT NULL, reqpcOtherRequirements VARCHAR(50)
 PRIMARY KEY (reqpcId))
 ENGINE=InnoDB
 
-insert into requirementPromptCloud values(1, 'abc', 'abc', 'abc@abc.com', '111-111-1111', 'jkjkjk', 'ghgh565656', 'www.abc.abc.av', 'XML', 'ghghghghghg, hjjhjhj, jkjkjkjk,jkjkjk uiuiuiuiuiuiuiu', '', 'Monthly', 'ghghghg ghghgh ghghgh bhghghghgh')
 
-insert into requirementPromptCloud values(2, 'abc', 'abc', 'abc@abc.com', '111-111-1111', 'jkjkjk', 'ghgh565656', 'www.abc.abc.av', 'XML', 'ghghghghghg, hjjhjhj, jkjkjkjk,jkjkjk uiuiuiuiuiuiuiu', 'klkl.nm', 'Monthly', 'ghghghg ghghgh ghghgh bhghghghgh')
-
-delete from requirementpromptcloud where reqpcId = 3
-select * from requirementPromptCloud
 
